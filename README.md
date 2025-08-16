@@ -14,6 +14,9 @@ O objetivo foi criar um **dashboard interativo** para analisar dados salariais d
   - Mapa com salário médio de Cientistas de Dados por país
 - Tabela detalhada com todos os dados filtrados.
 
+## 📸 Preview
+![Dashboard em ação](dashboard-salarios.gif)
+
 ## 🛠 Tecnologias Utilizadas
 
 - [Python](https://www.python.org/)
@@ -22,17 +25,18 @@ O objetivo foi criar um **dashboard interativo** para analisar dados salariais d
 - [Streamlit](https://streamlit.io/)
 
 ## 📂 Estrutura do Projeto
-  📦 imersao-dados-com-python-alura
-  ┣ app.py                 # Código principal do Streamlit
-  ┣ dados-tratados.csv     # Base de dados tratada
-  ┣ analise-tratamento-dados.ipynb  # Notebook com exploração e tratamento
-  ┣ requirements.txt       # Dependências do projeto
-  ┗ README.md              # Documentação
+📦 imersao-dados-com-python-alura
+- app.py                 # Código principal do Streamlit
+- dados-tratados.csv     # Base de dados tratada
+- analise-tratamento-dados.ipynb  # Notebook com exploração e tratamento
+- requirements.txt       # Dependências do projeto
+- README.md              # Documentação
 
 
 ## 🌐 Dashboard Online
 Você pode acessar a versão online do dashboard no Streamlit Cloud:
 🔗 [Acesse aqui](https://imersao-dados-com-python-alura-renata-c.streamlit.app/)
+
 
 ## 💻 Como rodar localmente
 
