@@ -23,11 +23,11 @@ O objetivo foi criar um **dashboard interativo** para analisar dados salariais d
 
 ## 📂 Estrutura do Projeto
   📦 imersao-dados-com-python-alura
- ┣ 📜 app.py                 # Código principal do Streamlit
- ┣ 📜 dados-tratados.csv     # Base de dados tratada
- ┣ 📜 analise-tratamento-dados.ipynb  # Notebook com exploração e tratamento
- ┣ 📜 requirements.txt       # Dependências do projeto
- ┗ 📜 README.md              # Documentação
+  ┣ app.py                 # Código principal do Streamlit
+  ┣ dados-tratados.csv     # Base de dados tratada
+  ┣ analise-tratamento-dados.ipynb  # Notebook com exploração e tratamento
+  ┣ requirements.txt       # Dependências do projeto
+  ┗ README.md              # Documentação
 
 
 ## 🌐 Dashboard Online

@@ -15,11 +15,21 @@ st.set_page_config(
 # --- Carregamento dos dados ---
 #df = pd.read_csv("https://raw.githubusercontent.com/vqrca/dashboard_salarios_dados/refs/heads/main/dados-imersao-final.csv")
 
-df = pd.read_csv("dados-imersao-final.csv")
+df = pd.read_csv("dados-tratados.csv")
 
 # --- Barra Lateral (Filtros) ---
 st.sidebar.header("🔍 Filtros")
 
+#Filtro por Local da Empresa
+locais_disponiveis = sorted(df['local_empresa'].unique())
+opcoes_locais = ['Todos'] + locais_disponiveis
+locais_selecionados = st.sidebar.multiselect(
+    "Local da Empresa", opcoes_locais, 
+    default='Todos')
+
+if 'Todos' in locais_selecionados:
+    locais_selecionados = locais_disponiveis
+    
 # Filtro de Ano
 anos_disponiveis = sorted(df['ano'].unique())
 anos_selecionados = st.sidebar.multiselect("Ano", anos_disponiveis, default=anos_disponiveis)
@@ -36,15 +46,6 @@ contratos_selecionados = st.sidebar.multiselect("Tipo de Contrato", contratos_di
 tamanhos_disponiveis = sorted(df['tamanho_empresa'].unique())
 tamanhos_selecionados = st.sidebar.multiselect("Tamanho da Empresa", tamanhos_disponiveis, default=tamanhos_disponiveis)
 
-#Filtro por Local da Empresa
-locais_disponiveis = sorted(df['local_empresa'].unique())
-opcoes_locais = ['Todos'] + locais_disponiveis
-locais_selecionados = st.sidebar.multiselect(
-    "Local da Empresa", opcoes_locais, 
-    default='Todos')
-
-if 'Todos' in locais_selecionados:
-    locais_selecionados = locais_disponiveis
 
 #Filtro por Residencia
 #residencias_disponiveis = sorted(df['residencia_iso3'].unique())
@@ -56,11 +57,12 @@ if 'Todos' in locais_selecionados:
 # --- Filtragem do DataFrame ---
 # O dataframe principal é filtrado com base nas seleções feitas na barra lateral.
 df_filtrado = df[
+    (df['local_empresa'].isin(locais_selecionados)) &
     (df['ano'].isin(anos_selecionados)) &
     (df['senioridade'].isin(senioridades_selecionadas)) &
     (df['contrato'].isin(contratos_selecionados)) &
-    (df['tamanho_empresa'].isin(tamanhos_selecionados)) &
-    (df['local_empresa'].isin(locais_selecionados))
+    (df['tamanho_empresa'].isin(tamanhos_selecionados))
+    
 ]
 
 # --- Conteúdo Principal ---
