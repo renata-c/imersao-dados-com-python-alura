@@ -1,11 +1,11 @@
-# 📊 Dashboard de Salários na Área de Dados
+# Dashboard de Salários na Área de Dados
 
 Este projeto foi desenvolvido durante o evento **Imersão Dados com Python**, realizado pela [Alura](https://www.alura.com.br/).  
 O objetivo foi criar um **dashboard interativo** para analisar dados salariais de profissionais da área de dados ao redor do mundo.
 
 ## 🚀 Funcionalidades
 
-- Filtros por **Ano**, **Senioridade**, **Tipo de Contrato**, **Tamanho da Empresa** e **Local da Empresa**.
+- Filtros por **Local da Empresa**, **Ano**, **Senioridade**, **Tipo de Contrato** e **Tamanho da Empresa**.
 - Exibição de **KPIs** como Salário Médio, Salário Máximo, Total de Registros e Cargo mais Frequente.
 - Gráficos interativos com **Plotly**:
   - Top 10 cargos por salário médio
@@ -22,11 +22,15 @@ O objetivo foi criar um **dashboard interativo** para analisar dados salariais d
 - [Streamlit](https://streamlit.io/)
 
 ## 📂 Estrutura do Projeto
-┣ 📜 app.py # Código principal do Streamlit
-┣ 📜 dados-imersao-final.csv # Base de dados
-┗ 📜 README.md # Documentação
+  📦 imersao-dados-com-python-alura
+ ┣ 📜 app.py                 # Código principal do Streamlit
+ ┣ 📜 dados-tratados.csv     # Base de dados tratada
+ ┣ 📜 analise-tratamento-dados.ipynb  # Notebook com exploração e tratamento
+ ┣ 📜 requirements.txt       # Dependências do projeto
+ ┗ 📜 README.md              # Documentação
 
-## 🌐 Deploy
+
+## 🌐 Dashboard Online
 Você pode acessar a versão online do dashboard no Streamlit Cloud:
 🔗 [Acesse aqui](https://imersao-dados-com-python-alura-renata-c.streamlit.app/)
 
